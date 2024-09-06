@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 /* General styles for the app container */
 .app-container {
   max-width: 100%;
@@ -11,10 +11,10 @@
 }
 
 .button-invoice {
-  font-family: 'Roboto', sans-serif; /* Apply the Roboto font */
+  
   font-size: 21px; /* Set font size to 21px */
   max-width: 50%;
-  background: linear-gradient(90deg, #380c4a, #a563b7, #40034c);
+  background: linear-gradient(90deg, #851781, #440d5f, #851781);
   color: white;
   padding: 10px 20px;
   border: none;
@@ -22,13 +22,13 @@
   cursor: pointer;
   display: block;
   margin: 0 auto;
-  text-decoration: none; /* Ensure no underline */
-  outline: none; /* Remove outline */
-  transition: transform 0.3s ease; /* Smooth transition for scaling */
+  
+  
+  transition: transform 0.5s ease; /* Smooth transition for scaling */
 }
 
 .button-invoice:hover {
-  transform: scale(1.5); /* Enlarge the button */
+  transform: scale(1.2); /* Enlarge the button */
 }
 
 /* Header styles */
