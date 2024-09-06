@@ -15,7 +15,7 @@
   font-family: 'Roboto', sans-serif; /* Apply the Roboto font */
   font-size: 21px; /* Set font size to 21px */
   max-width: 50%;
-  background: linear-gradient(90deg, #a563b7, #530970, #a563b7);
+  background: linear-gradient(90deg, #380c4a, #a563b7, #40034c);
   color: white;
   padding: 10px 20px;
   border: none;
@@ -23,13 +23,18 @@
   cursor: pointer;
   display: block;
   margin: 0 auto;
+  animation: pulse 1.5s infinite; /* Add continuous pulse animation */
   text-decoration: none; /* Ensure no underline */
   outline: none; /* Remove outline */
-  transition: transform 0.3s ease; /* Smooth transition for scaling */
 }
 
-.button-invoice:hover {
-  transform: scale(1.2); /* Enlarge the button on hover */
+@keyframes pulse {
+  0%, 100% {
+      transform: scale(1); /* Original size */
+  }
+  50% {
+      transform: scale(1.05); /* Scale up */
+  }
 }
 
 /* Header styles */
