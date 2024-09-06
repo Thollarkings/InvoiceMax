@@ -12,10 +12,10 @@
 }
 
 /* About Us container styles */
-.about-us-container,
+
 .sales-tax,
-.discount
-.home-button {
+.discount,
+.about-us-container {
     font-size: 20px; /* Increase font size */
     color: white; /* White text color */
     text-align: justify; /* Justified text */
