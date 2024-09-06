@@ -1,0 +1,43 @@
+/* Footer styles */
+.footer {
+    position: fixed; /* Fixes the footer at the bottom right */
+    bottom: 10px; /* Distance from the bottom */
+    right: 30px; /* Distance from the right */
+    background-color: #f39bf0; /* Background color for the footer */
+    padding: 5px 10px; /* Padding for spacing */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+    z-index: 1000; /* Ensure it appears above other elements */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.footer:hover {
+    background-color: #e68bce; /* Change color on hover for interactivity */
+}
+
+.copyright-circle {
+    border-radius: 50%; /* Make it circular */
+    background-color: #f39bf0; /* Light background for circle */
+    padding: 5px; /* Padding for the circle */
+    margin-right: 5px; /* Space between circle and text */
+    display: inline-block; /* Ensure it behaves like a block */
+    text-align: center; /* Center the text inside */
+    line-height: 1; /* Adjust line height for vertical centering */
+    font-size: 1.5em; /* Increase font size for better visibility */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .footer {
+        right: 60px; /* Less distance from the right on smaller screens */
+        bottom: 50px; /* Less distance from the bottom on smaller screens */
+        padding: 5px; /* Adjust padding for smaller screens */
+        font-size: 0.8em; /* Smaller font size for mobile */
+    }
+
+    .copyright-circle {
+        font-size: 1.2em; /* Smaller circle text for mobile */
+    }
+}
