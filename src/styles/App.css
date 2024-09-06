@@ -15,7 +15,7 @@
   font-family: 'Roboto', sans-serif; /* Apply the Roboto font */
   font-size: 21px; /* Set font size to 21px */
   max-width: 50%;
-  background: linear-gradient(90deg, #380c4a, #a563b7, #40034c);
+  background: linear-gradient(90deg, #a563b7, #4d006e, #a563b7);
   color: white;
   padding: 10px 20px;
   border: none;
@@ -33,7 +33,7 @@
       transform: scale(1); /* Original size */
   }
   50% {
-      transform: scale(1.05); /* Scale up */
+      transform: scale(1.2); /* Scale up */
   }
 }
 
