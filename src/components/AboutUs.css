@@ -7,7 +7,7 @@ h2 {
     font-size: 2em; /* Title font size */
     margin-bottom: 20px; /* Space below the title */
     padding: 10px;
-    margin-top: -50px;
+    margin-top: 0;
 }
 
 .about-us-container p {
