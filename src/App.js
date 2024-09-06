@@ -27,7 +27,7 @@ const App = () => {
     const [receiptNumber, setReceiptNumber] = useState('');
 
     return (
-        <Router>
+         <Router basename={process.env.PUBLIC_URL}> {'https://thollarkings.github.io/InvoiceMax/'}
             <div className="app-container">
                 <div className="button-container">
                     <Link to="/invoice">
