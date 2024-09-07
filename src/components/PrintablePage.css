@@ -184,7 +184,7 @@ button {
         width: 100%; /* Full width for the table */
         border-collapse: collapse; /* Remove double borders */
         margin-top: 10px;
-        border: 1px solid #860e7e; /* Light gray border for readability */
+        border: 1px solid #5c0856; /* Light gray border for readability */
     }
     
     th, td {
