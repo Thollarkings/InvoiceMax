@@ -96,7 +96,7 @@ const Navigation = () => {
 const Home = () => {
     return (
         <div>
-            <h2 style="color: white; text-shadow: -1px -1px 0 #9955BB, 1px -1px 0 #9955BB, -1px 1px 0 #9955BB, 1px 1px 0 #9955BB;">
+            <h2 style="color: white">
     Welcome to InvoiceMax
 </h2>
 
