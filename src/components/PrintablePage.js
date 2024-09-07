@@ -80,15 +80,16 @@ const PrintablePage = () => {
             </div>
 
             <h3>Currency: {formData.currency}</h3>
-            <table>
-                <thead style={{ backgroundColor: '#4a2c6c', color: 'black' }}>
-                    <tr>
-                        <th>Description</th>
-                        <th>Quantity</th>
-                        <th>Unit Price</th>
-                        <th>Line Total</th>
-                    </tr>
-                </thead>
+            
+            <table className="invoice-table">
+    <thead >
+        <tr>
+            <th>Description</th>
+            <th>Quantity</th>
+            <th>Unit Price</th>
+            <th>Line Total</th>
+        </tr>
+    </thead>
                 <tbody>
                     {formData.items.map((item, index) => (
                         <tr key={index}>

@@ -70,7 +70,7 @@ const Navigation = () => {
         <div className="button-container">
             {location.pathname !== '/printable' && (
                 <>
-                    <Link to="/invoice">
+                    <Link to="/">
                         <button className="home-button">Home</button>
                     </Link>
                     <Link to="/sales-tax">

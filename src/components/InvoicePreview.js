@@ -91,7 +91,7 @@ const InvoicePreview = ({ formData }) => {
 
                 <h3>Currency: {formData.currency}</h3>
                 <table className="invoice-table">
-    <thead className="table-header">
+    <thead >
         <tr>
             <th>Description</th>
             <th>Quantity</th>

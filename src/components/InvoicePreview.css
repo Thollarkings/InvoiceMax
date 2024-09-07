@@ -47,7 +47,7 @@ h4 {
     margin-top: 20px; /* Space above the table */
 }
 
-.invoice-table th,
+
 .invoice-table td {
     padding: 10px; /* Padding for table cells */
     text-align: left; /* Left-align text */
@@ -56,10 +56,13 @@ h4 {
 }
 
 .invoice-table th {
-    background-color: #7e1eec; /* Background color for header */
-    color: rgb(12, 1, 1); /* Text color for header */
+    background-color: #ec1ed0; /* Background color for header */
+    color: rgb(245, 242, 242); /* Text color for header */
     font-weight: bold; /* Bold header text */
+    background: linear-gradient(50deg, #380c4a, #9d0ac6);
 } 
+
+
 
 /* Totals section styles */
 .totals {
