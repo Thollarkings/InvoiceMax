@@ -96,7 +96,10 @@ const Navigation = () => {
 const Home = () => {
     return (
         <div>
-            <h2>Welcome to InvoiceMax</h2>
+            <h2 style="color: white; text-shadow: -1px -1px 0 #9955BB, 1px -1px 0 #9955BB, -1px 1px 0 #9955BB, 1px 1px 0 #9955BB;">
+    Welcome to InvoiceMax
+</h2>
+
             <Link to="/invoice">
                 <button className="button-invoice">Generate Invoice</button>
             </Link>
