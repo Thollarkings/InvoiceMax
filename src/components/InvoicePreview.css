@@ -121,10 +121,19 @@ h4 {
 /* Responsive design */
 @media (max-width: 600px) {
     .invoice-preview {
+        max-width: 100%;
         padding: 10px; /* Reduced padding for mobile */
         margin: 10px; /* Add margin to prevent edge-to-edge layout */
         
     }
+
+    .invoice-table {
+        width: 70%; /* Full width for the table */
+        border-collapse: collapse; /* Collapse borders for cleaner look */
+        margin: 10px auto; /* Space above the table and center it */
+        
+    }
+
     .background {
     max-width: 100%; /* Full width for the background */
     margin: 0; /* Centered */

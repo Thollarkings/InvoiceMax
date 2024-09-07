@@ -37,10 +37,13 @@
   }
 }
 
-/* Header styles */
-h2 {
-  text-align: center;
-  color: #333; /* Dark text for better contrast */
+.welcome-title {
+  font-size: 2em;                /* Increase font size */
+  color: #ffffff;                /* Set text color */
+  text-align: center;            /* Center the text */
+  margin: 20px 0;               /* Add top and bottom margin */
+  font-weight: bold;             /* Make the text bold */
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.692); /* Add a subtle shadow */
 }
 
 /* Form styles */
@@ -75,9 +78,7 @@ button {
   width: 100%; /* Full width button */
 }
 
-button:hover {
-  background-color: #0056b3; /* Darker shade on hover */
-}
+
 
 /* Invoice preview styles */
 .invoice-preview {

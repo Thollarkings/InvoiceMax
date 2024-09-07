@@ -11,6 +11,7 @@
     background-color: white; /* Ensure background is white for printing */
     color: #333; /* Dark text for readability */
     page-break-after: always; /* Ensure each print is on a new page */
+    border-radius: 18px; /* Rounded corners */
 }
 
 .watermark-container {
@@ -139,6 +140,28 @@ button {
     font-size: 16px;
 }
 
+@media (max-width: 600px) {
+.invoice-tablepp {
+    width: 70%; /* Full width for the table */
+    border-collapse: collapse; /* Collapse borders for cleaner look */
+    margin: 10px auto; /* Space above the table and center it */
+}
+
+.invoice-previewpp {
+    max-width: 90%;
+    font-family: Arial, sans-serif;
+    margin: 20px auto; /* Centered with margin */
+    padding: 20px; 
+    top: 5%;
+    border: 1px solid #ddd;
+    background-color: white; /* Ensure background is white for printing */
+    color: #333; /* Dark text for readability */
+    page-break-after: always; /* Ensure each print is on a new page */
+    border-radius: 8px; /* Rounded corners */
+}
+
+}
+
 /* Print Media Query */
 @media print {
     button,
@@ -147,10 +170,14 @@ button {
     }
     
     /* Ensure all elements are visible when printing */
+    
     .invoice-previewpp {
         border: none; /* Remove border for print */
         background-color: white; /* Ensure background is white */
         margin-top: -100px;
+    }
+    .invoice-previewpp {
+        border-radius: 8px; /* Rounded corners */
     }
 
     table {

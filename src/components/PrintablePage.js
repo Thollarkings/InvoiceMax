@@ -81,7 +81,7 @@ const PrintablePage = () => {
 
             <h3>Currency: {formData.currency}</h3>
             
-            <table className="invoice-table">
+            <table className="invoice-tablepp">
     <thead >
         <tr>
             <th>Description</th>
