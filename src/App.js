@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link, useLocation } from 'react-router-dom';
 import InvoiceForm from './components/InvoiceForm';
 import InvoicePreview from './components/InvoicePreview';
 import SalesTax from './components/SalesTax';
 import Discount from './components/Discount';
 import AboutUs from './components/AboutUs';
+import Footer from './components/Footer';
+import PrintablePage from './components/PrintablePage';
 import './styles/App.css';
-import './styles/InfoButtons.css'; // Import the new CSS file
-import Footer from './components/Footer'; 
+import './styles/InfoButtons.css';
 
 const App = () => {
     const [formData, setFormData] = useState({
@@ -18,31 +19,18 @@ const App = () => {
         customerAddress: '',
         phoneNumber: '',
         logo: null,
-        currency: '₦', // Default currency
-        salesTax: 0, // Sales tax field
-        discount: 0, // Discount field
+        currency: '₦',
+        salesTax: 0,
+        discount: 0,
         items: [{ description: '', quantity: '', unitPrice: '' }],
     });
-    
+
     const [receiptNumber, setReceiptNumber] = useState('');
 
     return (
-         <Router >
+        <Router>
             <div className="app-container">
-                <div className="button-container">
-                    <Link to="/invoice">
-                    <button class="home-button">Home</button>
-                    </Link>
-                    <Link to="/sales-tax">
-                    <button class="about-us-button">Sales Tax</button>
-                    </Link>
-                    <Link to="/discount">
-                    <button class="sales-tax-button">Discount</button>
-                    </Link>
-                    <Link to="/about-us">
-                    <button class="discount-button">About Us</button>
-                    </Link>
-                </div>
+                <Navigation />
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route 
@@ -64,13 +52,44 @@ const App = () => {
                             />
                         } 
                     />
+                    <Route path="/printable" element={<PrintablePage />} />
                     <Route path="/sales-tax" element={<SalesTax />} />
                     <Route path="/discount" element={<Discount />} />
                     <Route path="/about-us" element={<AboutUs />} />
                 </Routes>
-                <Footer /> {/* Add Footer component here */}
+                <Footer />
             </div>
         </Router>
+    );
+};
+
+const Navigation = () => {
+    const location = useLocation();
+
+    return (
+        <div className="button-container">
+            {location.pathname !== '/printable' && (
+                <>
+                    <Link to="/invoice">
+                        <button className="home-button">Home</button>
+                    </Link>
+                    <Link to="/sales-tax">
+                        <button className="about-us-button">Sales Tax</button>
+                    </Link>
+                    <Link to="/discount">
+                        <button className="sales-tax-button">Discount</button>
+                    </Link>
+                    <Link to="/about-us">
+                        <button className="discount-button">About Us</button>
+                    </Link>
+                </>
+            )}
+            {location.pathname === '/printable' && (
+                <Link to="/invoice">
+                    <button className="home-button">Edit Receipt</button>
+                </Link>
+            )}
+        </div>
     );
 };
 
@@ -79,7 +98,7 @@ const Home = () => {
         <div>
             <h2>Welcome to InvoiceMax</h2>
             <Link to="/invoice">
-            <button className="button-invoice">Generate Invoice</button>
+                <button className="button-invoice">Generate Invoice</button>
             </Link>
         </div>
     );

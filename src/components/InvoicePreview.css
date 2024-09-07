@@ -41,27 +41,25 @@ h4 {
     font-size: 15px; /* Reduced font size */
 }
 
-/* Table styles */
-table {
+.invoice-table {
     width: 100%; /* Full width for the table */
     border-collapse: collapse; /* Collapse borders for cleaner look */
     margin-top: 20px; /* Space above the table */
-    
 }
 
-th,
-td {
+.invoice-table th,
+.invoice-table td {
     padding: 10px; /* Padding for table cells */
     text-align: left; /* Left-align text */
     border-bottom: 1px solid #ddd; /* Border between cells */
-    font-size: 15px; /* Reduced font size */
+    font-size: 15px; /* Font size */
 }
 
-th {
-    background-color: #d1c4e9; /* Lighter purple for table header */
+.invoice-table th {
+    background-color: #7e1eec; /* Background color for header */
+    color: rgb(12, 1, 1); /* Text color for header */
     font-weight: bold; /* Bold header text */
-    font-size: 15px; /* Reduced font size */
-}
+} 
 
 /* Totals section styles */
 .totals {

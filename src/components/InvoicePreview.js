@@ -22,9 +22,7 @@ const InvoicePreview = ({ formData }) => {
 
     const { subtotal, discountAmount, salesTax, total } = calculateTotals();
 
-    const handlePrint = () => {
-        window.print();
-    };
+
 
     return (
         <div className="background">
@@ -92,26 +90,26 @@ const InvoicePreview = ({ formData }) => {
                 </div>
 
                 <h3>Currency: {formData.currency}</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Description</th>
-                            <th>Quantity</th>
-                            <th>Unit Price</th>
-                            <th>Line Total</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {formData.items.map((item, index) => (
-                            <tr key={index}>
-                                <td>{item.description}</td>
-                                <td>{item.quantity}</td>
-                                <td>{formData.currency}{parseFloat(item.unitPrice).toFixed(2)}</td>
-                                <td>{formData.currency}{(parseFloat(item.quantity) * parseFloat(item.unitPrice)).toFixed(2)}</td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
+                <table className="invoice-table">
+    <thead className="table-header">
+        <tr>
+            <th>Description</th>
+            <th>Quantity</th>
+            <th>Unit Price</th>
+            <th>Line Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        {formData.items.map((item, index) => (
+            <tr key={index}>
+                <td>{item.description}</td>
+                <td>{item.quantity}</td>
+                <td>{formData.currency}{parseFloat(item.unitPrice).toFixed(2)}</td>
+                <td>{formData.currency}{(parseFloat(item.quantity) * parseFloat(item.unitPrice)).toFixed(2)}</td>
+            </tr>
+        ))}
+    </tbody>
+</table>
                 <div className="totals">
                     <div style={{ display: 'flex', justifyContent: 'flex-end', margin: '100px 0 0 0' }}>
                         <div style={{ textAlign: 'right', marginRight: '20px' }}>
@@ -170,24 +168,24 @@ const InvoicePreview = ({ formData }) => {
 
             {/* Button to print the invoice */}
             <div style={{ textAlign: 'center', marginTop: '10px' }}>
-                <button 
-                    onClick={handlePrint}
-                    style={{
-                        maxWidth: '300px',
-                        padding: '10px 20px',
-                        backgroundColor: '#4a2c6c',
-                        color: 'white',
-                        fontSize: '18px',
-                        border: 'none',
-                        borderRadius: '5px',
-                        cursor: 'pointer',
-                        margin: '0 auto', // Center button horizontally
-                        display: 'inline-block' // Allow margin auto to work
-                    }}
-                >
-                    Print Invoice
-                </button>
-            </div>
+    <button 
+        onClick={() => navigate('/printable', { state: { formData } })} // Navigate to PrintablePage with formData
+        style={{
+            maxWidth: '300px',
+            padding: '10px 20px',
+            backgroundColor: '#4a2c6c',
+            color: 'white',
+            fontSize: '18px',
+            border: 'none',
+            borderRadius: '5px',
+            cursor: 'pointer',
+            margin: '0 auto', // Center button horizontally
+            display: 'inline-block' // Allow margin auto to work
+        }}
+    >
+        View Receipt
+    </button>
+</div>
         </div>
     );
 };

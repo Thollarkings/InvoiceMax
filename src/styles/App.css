@@ -122,7 +122,7 @@ button:hover {
   bottom: 10px; /* Distance from the bottom */
   right: 30px; /* Distance from the right */
   background-color: #f39bf0; /* Background color for the footer */
-  padding: 5px 10px; /* Padding for spacing */
+  padding: 1px 10px; /* Padding for spacing */
   border-radius: 5px; /* Rounded corners */
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
   z-index: 1000; /* Ensure it appears above other elements */
@@ -176,4 +176,25 @@ button:hover {
   .copyright-circle {
       font-size: 1.2em; /* Smaller circle text for mobile */
   }
+
+  @media print {
+    button,
+    a {
+        display: none !important; /* Hide all buttons and links when printing */
+    }
+    .button-container {
+      display: none !important; /* Hide the button container when printing */
+  }
+
+  .footer {
+    right: 20px; /* Adjust footer position */
+    bottom: 20px; /* Adjust footer position */
+    font-size: 0.5em; /* Smaller font size for mobile */
+    padding: 1px 10px; /* Padding for spacing */
+}
+
+.copyright-circle {
+    font-size: 0.8em; /* Smaller circle text for mobile */
+}
+}
 }
