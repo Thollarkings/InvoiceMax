@@ -96,7 +96,12 @@ const Navigation = () => {
 const Home = () => {
     return (
         <div>
+<<<<<<< HEAD
             <h2 className="welcome-title">Welcome to InvoiceMax</h2>
+=======
+            <h2>Welcome to InvoiceMax</h2>
+
+>>>>>>> 055c44860b8361be36231151e87fe035689df07d
             <Link to="/invoice">
                 <button className="button-invoice">Generate Invoice</button>
             </Link>
