@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; // Ensure you have this import for routing
+import './AboutUs.css';
 
 const Discount = () => {
     const [isHovered, setIsHovered] = useState(false);
