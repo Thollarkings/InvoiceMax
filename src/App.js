@@ -76,7 +76,7 @@ const Navigation = () => {
                     <Link to="/sales-tax" className="link-no-underline">
                         <button className="about-us-button">Sales Tax</button>
                     </Link>
-                    <Link to="/discount">
+                    <Link to="/discount" className="link-no-underline">
                         <button className="sales-tax-button">Discount</button>
                     </Link>
                     <Link to="/about-us" className="link-no-underline">

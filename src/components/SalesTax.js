@@ -24,7 +24,7 @@ const SalesTax = () => {
             </p>
             {/* New button added below */}
             <div className="invoice-button-container">
-                <Link to="/invoice">
+                <Link to="/invoice" className="link-no-underline">
                     <button
                         style={buttonStyle}
                         onMouseEnter={() => setIsHovered(true)} // Set hover state to true

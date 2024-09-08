@@ -14,15 +14,21 @@ h2 {
     font-size: 20px; /* Font size for the paragraph */
     line-height: 1.5; /* Line height for better readability */
 }
-
 /* Contact Us section styles */
 .contact-us {
     margin-top: 40px; /* Space above the contact section */
     text-align: center; /* Center the text */
-    font-size: 1rem; /* Use relative units for better responsiveness */
-    color: #000000; /* Text color */
-    /* No background color or padding to keep it simple */
+    font-size: 2em; /* Font size */
+    color: rgb(246, 243, 175); /* Text color set to white */
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.595); /* Apply black shadow with 10px offset */
+    font-weight: bold; /* Make the text bold */
 }
+
+.contact-us a {
+    color: white; /* Link color set to white */
+    text-decoration: none; /* Remove underline from the link */
+}
+
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 600px) {
