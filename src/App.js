@@ -70,22 +70,22 @@ const Navigation = () => {
         <div className="button-container">
             {location.pathname !== '/printable' && (
                 <>
-                    <Link to="/">
+                    <Link to="/" className="link-no-underline">
                         <button className="home-button">Home</button>
                     </Link>
-                    <Link to="/sales-tax">
+                    <Link to="/sales-tax" className="link-no-underline">
                         <button className="about-us-button">Sales Tax</button>
                     </Link>
                     <Link to="/discount">
                         <button className="sales-tax-button">Discount</button>
                     </Link>
-                    <Link to="/about-us">
+                    <Link to="/about-us" className="link-no-underline">
                         <button className="discount-button">About Us</button>
                     </Link>
                 </>
             )}
             {location.pathname === '/printable' && (
-                <Link to="/invoice">
+                <Link to="/invoice" className="link-no-underline">
                     <button className="home-button">Edit Receipt</button>
                 </Link>
             )}
@@ -97,9 +97,10 @@ const Home = () => {
     return (
         <div>
             <h2 className="welcome-title">Welcome to InvoiceMax</h2>
-            <Link to="/invoice">
-                <button className="button-invoice">Generate Invoice</button>
+            <Link to="/invoice" className="link-no-underline">
+                 <button className="button-invoice">Generate Invoice</button>
             </Link>
+
         </div>
     );
 };

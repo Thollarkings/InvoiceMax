@@ -28,6 +28,11 @@
   outline: none; /* Remove outline */
 }
 
+.link-no-underline {
+  text-decoration: none; /* Remove underline from Link */
+}
+
+
 @keyframes pulse {
   0%, 100% {
       transform: scale(1); /* Original size */
