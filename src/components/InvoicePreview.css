@@ -10,10 +10,10 @@
 
 /* Background Color */
 .background {
-    max-width: 70%; /* Full width for the background */
+    max-width: 80%; /* Full width for the background */
     margin: auto; /* Centered */
     background: linear-gradient(50deg, #380c4a, #9d0ac6); /* Gradient background */
-    min-height: 100vh; /* Full height coverage */
+    min-height: 150vh; /* Full height coverage */
     border-radius: 20px; /* Rounded corners */
     border: 2px solid rgb(148, 42, 152); /* Border around background */
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.419); /* Shadow for depth */

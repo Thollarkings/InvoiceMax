@@ -144,7 +144,7 @@ const InvoicePreview = ({ formData }) => {
                 <button 
                     onClick={() => navigate(-1)} // Navigate back on button click
                     style={{
-                        maxWidth: '200px',
+                        maxWidth: '150px',
                         padding: '5px 20px',
                         backgroundColor: '#9d0ac6',
                         color: 'white',
@@ -152,7 +152,7 @@ const InvoicePreview = ({ formData }) => {
                         border: 'none',
                         borderRadius: '5px',
                         cursor: 'pointer',
-                        margin: '0 auto', // Center button horizontally
+                        marginBottom: '40px', // Center button horizontally
                         display: 'inline-block' // Allow margin auto to work
                     }}
                 >
@@ -167,7 +167,7 @@ const InvoicePreview = ({ formData }) => {
                     style={{
                         marginTop: '60px',
                         maxWidth: '300px',
-                        padding: '10px 20px',
+                        padding: '6px 20px',
                         background: 'linear-gradient(to right, #3b1e55, , #4a2c6c)',
                         color: 'white',
                         fontSize: '18px',
@@ -188,18 +188,20 @@ const InvoicePreview = ({ formData }) => {
                 <button 
                     onClick={() => navigate('/ViewInvoice', { state: { formData } })} 
                     style={{
+                        marginTop: '0px',
+                        marginBottom: '4px',
                         maxWidth: '300px',
-                        marginTop: '10px',
-                        padding: '10px 20px',
-                        background: 'linear-gradient(to right, #3b1e55, #6a4e8d, #4a2c6c)',
+                        padding: '6px 20px',
+                        background: 'linear-gradient(to right, #3b1e55, , #4a2c6c)',
                         color: 'white',
                         fontSize: '18px',
                         borderWidth: '1px',
                         borderStyle: 'solid',
                         borderColor: '#6a4e8d',
-                        border: 'none',
                         borderRadius: '15px',
                         cursor: 'pointer',
+                        margin: '0 auto', // Center button horizontally
+                        display: 'inline-block' // Allow margin auto to work
                     }}
                 >
                     View Invoice
