@@ -183,6 +183,78 @@ button {
       font-size: 1.2em; /* Smaller circle text for mobile */
   }
 
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f39bf0;
+    color:#f39bf0;
+}
+
+.desktop-menu {
+    display: flex; /* Show this on larger screens */
+    background-color: #f39bf0;
+    
+}
+
+.hamburger {
+    display: none; /* Hide by default */
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    
+    
+    
+}
+
+.bar {
+    height: 3px;
+    width: 100%;
+    background-color: #333; /* Color for the hamburger bars */
+}
+
+.menu {
+    position: absolute; /* Position it as needed */
+    top: 50px; /* Adjust based on your layout */
+    left: 0; /* Align to the left */
+    background: linear-gradient(50deg, #380c4a, #9d0ac6);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    z-index: 1000; /* Keep it above other elements */
+    
+    
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    background-color: #f39bf0;
+    
+}
+
+.menu li {
+    padding: 15px 20px; /* Padding for menu items */
+    background-color: #6b1668;
+    
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333; /* Link color */
+    color:#ffffff;
+}
+
+@media (max-width: 767px) {
+    .desktop-menu {
+        display: none; /* Hide buttons on mobile */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger on mobile */
+    }
+}
+
   @media print {
     button,
     a {
