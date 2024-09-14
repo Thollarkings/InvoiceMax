@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './InvoicePreview.css';
 
+
 const InvoicePreview = ({ formData }) => {
     const navigate = useNavigate();
 
@@ -22,12 +23,13 @@ const InvoicePreview = ({ formData }) => {
 
     const { subtotal, discountAmount, salesTax, total } = calculateTotals();
 
-
-
     return (
         <div className="background">
             <div className="invoice-preview">
-                <h2>Sale/Service Receipt</h2>
+                <h2>Sale/Service Invoice</h2>
+                <div style={{ textAlign: 'right', marginBottom: '20px' }}>
+                    <h3>{formData.selectedDate}</h3>
+                </div>
                 <div style={{ textAlign: 'right', marginBottom: '20px' }}>
                     <h3>R.No.: {formData.receiptNumber}</h3>
                 </div>
@@ -82,61 +84,53 @@ const InvoicePreview = ({ formData }) => {
                                     return acc;
                                 }, [])}
                             </p>
-
                             <h4 style={{ margin: '30px 0 0 0' }}>Contact Us:</h4>
-                            <p style={{ margin: '0 0 0 0' }}>{formData.sellerPhoneNumber}</p>
+                            <p style={{ margin: 0 }}>{formData.sellerPhoneNumber}</p>
                         </div>
                     </div>
                 </div>
 
                 <h3>Currency: {formData.currency}</h3>
                 <table className="invoice-table">
-    <thead >
-        <tr>
-            <th>Description</th>
-            <th>Quantity</th>
-            <th>Unit Price</th>
-            <th>Line Total</th>
-        </tr>
-    </thead>
-    <tbody>
-        {formData.items.map((item, index) => (
-            <tr key={index}>
-                <td>{item.description}</td>
-                <td>{item.quantity}</td>
-                <td>{formData.currency}{parseFloat(item.unitPrice).toFixed(2)}</td>
-                <td>{formData.currency}{(parseFloat(item.quantity) * parseFloat(item.unitPrice)).toFixed(2)}</td>
-            </tr>
-        ))}
-    </tbody>
-</table>
+                    <thead className="table-header">
+                        <tr>
+                            <th>Description</th>
+                            <th>Quantity</th>
+                            <th>Unit Price</th>
+                            <th>Line Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {formData.items.map((item, index) => (
+                            <tr key={index}>
+                                <td>{item.description}</td>
+                                <td>{item.quantity}</td>
+                                <td>{formData.currency}{parseFloat(item.unitPrice).toFixed(2)}</td>
+                                <td>{formData.currency}{(parseFloat(item.quantity) * parseFloat(item.unitPrice)).toFixed(2)}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+
                 <div className="totals">
                     <div style={{ display: 'flex', justifyContent: 'flex-end', margin: '100px 0 0 0' }}>
                         <div style={{ textAlign: 'right', marginRight: '20px' }}>
-                            <p style={{ margin: '0px', fontSize: '1em', fontWeight: 'bold' }}>
-                                Discount:
-                            </p>
+                            <p style={{ margin: '0px', fontSize: '1em', fontWeight: 'bold' }}>Discount:</p>
                             <p style={{ margin: '0', fontSize: '1em', fontWeight: 'bold' }}>
                                 {formData.currency} {discountAmount.toFixed(2)}
                             </p>
-                            <p style={{ margin: '30px 0 0 0', fontSize: '1em', fontWeight: 'bold' }}>
-                                Sales Tax:
-                            </p>
+                            <p style={{ margin: '30px 0 0 0', fontSize: '1em', fontWeight: 'bold' }}>Sales Tax:</p>
                             <p style={{ margin: '0', fontSize: '1em', fontWeight: 'bold' }}>
                                 {formData.currency} {salesTax.toFixed(2)}
                             </p>
                         </div>
                         
                         <div style={{ textAlign: 'right' }}>
-                            <p style={{ margin: '0', fontSize: '1em', fontWeight: 'bold' }}>
-                                Subtotal:
-                            </p>
+                            <p style={{ margin: '0', fontSize: '1em', fontWeight: 'bold' }}>Subtotal:</p>
                             <p style={{ margin: '0', fontSize: '1em', fontWeight: 'bold' }}>
                                 {formData.currency} {subtotal.toFixed(2)}
                             </p>
-                            <p style={{ margin: '20px 0 0 0', fontSize: '1.4em', fontWeight: 'bold' }}>
-                                Total:
-                            </p>
+                            <p style={{ margin: '20px 0 0 0', fontSize: '1#6a4e8d.4em', fontWeight: 'bold' }}>Total:</p>
                             <p style={{ margin: '0', fontSize: '1.4em', fontWeight: 'bold' }}>
                                 {formData.currency} {total.toFixed(2)}
                             </p>
@@ -150,11 +144,11 @@ const InvoicePreview = ({ formData }) => {
                 <button 
                     onClick={() => navigate(-1)} // Navigate back on button click
                     style={{
-                        maxWidth: '300px',
-                        padding: '10px 20px',
+                        maxWidth: '200px',
+                        padding: '5px 20px',
                         backgroundColor: '#9d0ac6',
                         color: 'white',
-                        fontSize: '18px',
+                        fontSize: '15px',
                         border: 'none',
                         borderRadius: '5px',
                         cursor: 'pointer',
@@ -168,24 +162,50 @@ const InvoicePreview = ({ formData }) => {
 
             {/* Button to print the invoice */}
             <div style={{ textAlign: 'center', marginTop: '10px' }}>
-    <button 
-        onClick={() => navigate('/printable', { state: { formData } })} // Navigate to PrintablePage with formData
-        style={{
-            maxWidth: '300px',
-            padding: '10px 20px',
-            backgroundColor: '#4a2c6c',
-            color: 'white',
-            fontSize: '18px',
-            border: 'none',
-            borderRadius: '5px',
-            cursor: 'pointer',
-            margin: '0 auto', // Center button horizontally
-            display: 'inline-block' // Allow margin auto to work
-        }}
-    >
-        View Receipt
-    </button>
-</div>
+                <button 
+                    onClick={() => navigate('/printable', { state: { formData } })} // Navigate to PrintablePage with formData
+                    style={{
+                        marginTop: '60px',
+                        maxWidth: '300px',
+                        padding: '10px 20px',
+                        background: 'linear-gradient(to right, #3b1e55, , #4a2c6c)',
+                        color: 'white',
+                        fontSize: '18px',
+                        borderWidth: '1px',
+                        borderStyle: 'solid',
+                        borderColor: '#6a4e8d',
+                        borderRadius: '15px',
+                        cursor: 'pointer',
+                        margin: '0 auto', // Center button horizontally
+                        display: 'inline-block' // Allow margin auto to work
+                    }}
+                >
+                    View Receipt
+                </button>
+                </div>
+                <div style={{ textAlign: 'center', marginTop: '10px' }}>
+                
+                <button 
+                    onClick={() => navigate('/ViewInvoice', { state: { formData } })} 
+                    style={{
+                        maxWidth: '300px',
+                        marginTop: '10px',
+                        padding: '10px 20px',
+                        background: 'linear-gradient(to right, #3b1e55, #6a4e8d, #4a2c6c)',
+                        color: 'white',
+                        fontSize: '18px',
+                        borderWidth: '1px',
+                        borderStyle: 'solid',
+                        borderColor: '#6a4e8d',
+                        border: 'none',
+                        borderRadius: '15px',
+                        cursor: 'pointer',
+                    }}
+                >
+                    View Invoice
+                </button>
+               
+            </div>
         </div>
     );
 };

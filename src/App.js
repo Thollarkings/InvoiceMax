@@ -7,6 +7,7 @@ import Discount from './components/Discount';
 import AboutUs from './components/AboutUs';
 import Footer from './components/Footer';
 import PrintablePage from './components/PrintablePage';
+import ViewInvoice from './components/ViewInvoice'; // Ensure this is imported
 import './styles/App.css';
 import './styles/InfoButtons.css';
 
@@ -56,6 +57,8 @@ const App = () => {
                     <Route path="/sales-tax" element={<SalesTax />} />
                     <Route path="/discount" element={<Discount />} />
                     <Route path="/about-us" element={<AboutUs />} />
+                    <Route path="/ViewInvoice" element={<ViewInvoice />} />
+
                 </Routes>
                 <Footer />
             </div>
@@ -84,11 +87,8 @@ const Navigation = () => {
                     </Link>
                 </>
             )}
-            {location.pathname === '/printable' && (
-                <Link to="/invoice" className="link-no-underline">
-                    <button className="home-button">Edit Receipt</button>
-                </Link>
-            )}
+            
+            
         </div>
     );
 };

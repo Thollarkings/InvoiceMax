@@ -38,8 +38,34 @@
 /* Focus styles for input fields */
 .invoice-form input[type="text"]:focus,
 .invoice-form input[type="number"]:focus,
-.invoice-form select:focus {
+.invoice-form select:focus
+.Date-selector {
     border-color: #6a075c; /* Change border color on focus */
+}
+
+.date-input {
+    padding: 10px; /* Padding inside the input */
+    font-size: 1rem; /* Font size */
+    border: 2px solid #4a2c6c; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    width: 200px; /* Fixed width */
+    outline: none; /* Remove default outline */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+.date-input:focus {
+    border-color: #9d0ac6; /* Change border color on focus */
+}
+
+.date-input::-webkit-calendar-picker-indicator {
+    background: #4a2c6c; /* Custom color for the calendar icon */
+    border-radius: 5px; /* Match input border radius */
+    padding: 2px; /* Padding around the icon */
+}
+
+.date-input::-webkit-inner-spin-button {
+    -webkit-appearance: none; /* Hide spinner for better styling */
+    margin: 0; /* Remove margin */
 }
 
 /* Label styles */

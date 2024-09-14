@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './InvoiceForm.css';
+import DateSelector from './DateSelector';
 
 const InvoiceForm = ({ formData, setFormData }) => {
     const navigate = useNavigate();
@@ -29,6 +30,10 @@ const InvoiceForm = ({ formData, setFormData }) => {
         setFormData({ ...formData, discount: value });
     };
 
+    const handleDateChange = (date) => {
+        setFormData({ ...formData, selectedDate: date }); // Update selectedDate in formData
+    };
+
     const addItem = () => {
         setFormData({
             ...formData,
@@ -46,6 +51,10 @@ const InvoiceForm = ({ formData, setFormData }) => {
             <h2 style={{ color: '#ffffff' }}>Create Invoice</h2>
             <div className="input-background">
                 <form onSubmit={handleSubmit}>
+                <DateSelector 
+                        onChange={handleDateChange} 
+                        selectedDate={formData.selectedDate} // Pass the current selected date
+                        />
                     <div>
                         <label>Receipt Number:</label>
                         <input
@@ -198,13 +207,13 @@ const InvoiceForm = ({ formData, setFormData }) => {
                     </div>
 
                     <div style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
-    <button type="button" onClick={addItem} style={{ margin: '0 5px', padding: '10px 15px' }}>
-        Add Item
-    </button>
-    <button type="submit" style={{ margin: '0 5px', padding: '10px 15px' }}>
-        Submit Invoice
-    </button>
-</div>
+                        <button type="button" onClick={addItem} style={{ margin: '0 5px', padding: '10px 15px' }}>
+                            Add Item
+                        </button>
+                        <button type="submit" style={{ margin: '0 5px', padding: '10px 15px' }}>
+                            Submit Invoice
+                        </button>
+                    </div>
                 </form>
             </div>
         </div>
