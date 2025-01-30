@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/InvoiceMax/static/css/main.2568b865.css",
-    "main.js": "/InvoiceMax/static/js/main.fdb03b07.js",
+    "main.js": "/InvoiceMax/static/js/main.d33e29ef.js",
     "static/js/453.f3d67966.chunk.js": "/InvoiceMax/static/js/453.f3d67966.chunk.js",
     "index.html": "/InvoiceMax/index.html",
     "main.2568b865.css.map": "/InvoiceMax/static/css/main.2568b865.css.map",
-    "main.fdb03b07.js.map": "/InvoiceMax/static/js/main.fdb03b07.js.map",
+    "main.d33e29ef.js.map": "/InvoiceMax/static/js/main.d33e29ef.js.map",
     "453.f3d67966.chunk.js.map": "/InvoiceMax/static/js/453.f3d67966.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2568b865.css",
-    "static/js/main.fdb03b07.js"
+    "static/js/main.d33e29ef.js"
   ]
 }
