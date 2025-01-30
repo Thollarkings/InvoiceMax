@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes, Link, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link, useLocation, Navigate } from 'react-router-dom';
 import InvoiceForm from './components/InvoiceForm';
 import InvoicePreview from './components/InvoicePreview';
 import SalesTax from './components/SalesTax';
@@ -8,8 +8,10 @@ import AboutUs from './components/AboutUs';
 import Footer from './components/Footer';
 import PrintablePage from './components/PrintablePage';
 import ViewInvoice from './components/ViewInvoice'; // Ensure this is imported
+import Home from './components/Home'; // Import the extracted Home component
 import './styles/App.css';
 import './styles/InfoButtons.css';
+
 
 const App = () => {
     const [formData, setFormData] = useState({
@@ -58,6 +60,7 @@ const App = () => {
                     <Route path="/discount" element={<Discount />} />
                     <Route path="/about-us" element={<AboutUs />} />
                     <Route path="/ViewInvoice" element={<ViewInvoice />} />
+                    <Route path="*" element={<Navigate to="/" replace />} />
 
                 </Routes>
                 <Footer />
@@ -93,16 +96,5 @@ const Navigation = () => {
     );
 };
 
-const Home = () => {
-    return (
-        <div>
-            <h2 className="welcome-title">Welcome to InvoiceMax</h2>
-            <Link to="/invoice" className="link-no-underline">
-                 <button className="button-invoice">Generate Invoice</button>
-            </Link>
-
-        </div>
-    );
-};
 
 export default App;
