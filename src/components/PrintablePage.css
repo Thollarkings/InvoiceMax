@@ -1,0 +1,226 @@
+/* PrintablePage.css */
+
+/* General styles for the printable receipt */
+.invoice-previewpp {
+    max-width: 80%;
+    font-family: Arial, sans-serif;
+    margin: 20px auto; /* Centered with margin */
+    padding: 20px; 
+    top: 5%;
+    border: 1px solid #ddd;
+    background-color: white; /* Ensure background is white for printing */
+    color: #333; /* Dark text for readability */
+    page-break-after: always; /* Ensure each print is on a new page */
+    border-radius: 18px; /* Rounded corners */
+}
+
+.watermark-container {
+    position: fixed; /* Keeps the watermarks fixed on the page */
+    top: 5%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Adjust number of columns */
+    grid-template-rows: repeat(10, 1fr); /* Adjust number of rows */
+    pointer-events: none; /* Prevent interaction */
+    z-index: 1000; /* Ensure it's on top of other elements */
+}
+
+.watermark {
+    font-size: 3em; /* Set font size to 5em */
+    color: rgba(0, 0, 0, 0.3); /* Adjust color for less transparency */
+    opacity: 0.3; /* Set individual opacity for visibility */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Positioning for triangular honeycomb effect */
+.watermark:nth-child(1) { grid-row: 1; grid-column: 2; }
+.watermark:nth-child(2) { grid-row: 1; grid-column: 4; }
+.watermark:nth-child(3) { grid-row: 2; grid-column: 1; }
+.watermark:nth-child(4) { grid-row: 2; grid-column: 3; }
+.watermark:nth-child(5) { grid-row: 2; grid-column: 5; }
+.watermark:nth-child(6) { grid-row: 3; grid-column: 2; }
+.watermark:nth-child(7) { grid-row: 3; grid-column: 4; }
+.watermark:nth-child(8) { grid-row: 4; grid-column: 1; }
+.watermark:nth-child(9) { grid-row: 4; grid-column: 3; }
+.watermark:nth-child(10) { grid-row: 4; grid-column: 5; }
+.watermark:nth-child(11) { grid-row: 5; grid-column: 2; }
+.watermark:nth-child(12) { grid-row: 5; grid-column: 4; }
+.watermark:nth-child(13) { grid-row: 6; grid-column: 1; }
+.watermark:nth-child(14) { grid-row: 6; grid-column: 3; }
+.watermark:nth-child(15) { grid-row: 6; grid-column: 5; }
+.watermark:nth-child(16) { grid-row: 7; grid-column: 2; }
+.watermark:nth-child(17) { grid-row: 7; grid-column: 4; }
+.watermark:nth-child(18) { grid-row: 8; grid-column: 1; }
+.watermark:nth-child(19) { grid-row: 8; grid-column: 3; }
+.watermark:nth-child(20) { grid-row: 8; grid-column: 5; }
+.watermark:nth-child(21) { grid-row: 9; grid-column: 2; }
+.watermark:nth-child(22) { grid-row: 9; grid-column: 4; }
+.watermark:nth-child(23) { grid-row: 10; grid-column: 1; }
+.watermark:nth-child(24) { grid-row: 10; grid-column: 3; }
+.watermark:nth-child(25) { grid-row: 10; grid-column: 5; }
+.watermark:nth-child(26) { grid-row: 11; grid-column: 2; }
+.watermark:nth-child(27) { grid-row: 11; grid-column: 4; }
+.watermark:nth-child(28) { grid-row: 12; grid-column: 1; }
+.watermark:nth-child(29) { grid-row: 12; grid-column: 3; }
+.watermark:nth-child(30) { grid-row: 12; grid-column: 5; }
+/* Continue adding positions for more watermarks as needed */
+
+.customer-infopp {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    text-align: left; /* Ensure text is left-aligned */
+}
+
+.customer-infopp h4 {
+    margin: 0;
+}
+
+.customer-infopp div {
+    margin: 0;
+}
+
+.customer-infopp p {
+    margin: 0;
+}
+
+.customer-infopp p:last-of-type {
+    margin-top: 20px;
+}
+
+/* Header styles */
+h2 {
+    color: #4a2c6c; /* Primary color for headers */
+}
+
+h3, h4 {
+    margin: 5px 0; /* Consistent margin for headers */
+}
+
+/* Table styles */
+table {
+    width: 100%; /* Full width for the table */
+    border-collapse: collapse; /* Remove double borders */
+    margin-top: 20px;
+    border: 1px solid #860e7e; /* Light gray border for readability */
+}
+
+th, td {
+    border: 1px solid #860e7e; /* Light gray border for readability */
+    padding: 8px; /* Padding for table cells */
+    text-align: left; /* Left-align text */
+}
+
+th {
+    background-color: #4a2c6c; /* Header background color */
+    color: white; /* White text for contrast */
+}
+
+/* Totals section styles */
+.totalspp {
+    margin-top: 30px; /* Space above totals */
+    font-weight: bold; /* Bold text for emphasis */
+}
+
+
+/* Button styles */
+button {
+    display: block;
+    margin: 20px auto; /* Center the button */
+    padding: 10px 20px;
+    background-color: #4a2c6c; /* Button color */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+@media (max-width: 600px) {
+.invoice-tablepp {
+    width: 70%; /* Full width for the table */
+    border-collapse: collapse; /* Collapse borders for cleaner look */
+    margin: 10px auto; /* Space above the table and center it */
+}
+
+.invoice-previewpp {
+    max-width: 90%;
+    font-family: Arial, sans-serif;
+    margin: 20px auto; /* Centered with margin */
+    padding: 20px; 
+    top: 5%;
+    border: 1px solid #ddd;
+    background-color: white; /* Ensure background is white for printing */
+    color: #333; /* Dark text for readability */
+    page-break-after: always; /* Ensure each print is on a new page */
+    border-radius: 8px; /* Rounded corners */
+}
+
+}
+
+/* Print Media Query */
+@media print {
+    button,
+    a {
+        display: none !important; /* Hide all buttons and links when printing */
+    }
+    
+    /* Ensure all elements are visible when printing */
+    
+    .invoice-previewpp {
+        border: none; /* Remove border for print */
+        background-color: white; /* Ensure background is white */
+        margin-top: -100px;
+    }
+    .invoice-previewpp {
+        border-radius: 8px; /* Rounded corners */
+    }
+
+    table {
+        width: 100%; /* Full width for the table */
+        border-collapse: collapse; /* Remove double borders */
+        margin-top: 10px;
+        border: 1px solid #5c0856; /* Light gray border for readability */
+    }
+    
+    th, td {
+        border: 1px solid #860e7e; /* Light gray border for readability */
+        padding: 2px; /* Padding for table cells */
+        text-align: left; /* Left-align text */
+    }
+    
+    th {
+        background-color: #4a2c6c; /* Header background color */
+        color: rgb(255, 255, 255); /* White text for contrast */
+    }
+
+    .customer-infopp {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the left */
+        text-align: left; /* Ensure text is left-aligned */
+    }
+    
+    .customer-infopp h4 {
+        margin: 0;
+    }
+    
+    .customer-infopp div {
+        margin: 0;
+    }
+    
+    .customer-infopp p {
+        margin: 0;
+    }
+    
+    .customer-infopp p:last-of-type {
+        margin-top: 10px;
+    }
+    .button-container {
+        display: none !important; /* Hide the button container when printing */
+    }
+}

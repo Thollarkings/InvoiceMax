@@ -1,0 +1,47 @@
+/* Styles for the About Us section */
+.about-us-container h2,
+.sales-tax h2,
+.discount h2{
+    padding: 10px; /* Padding for the container */
+    font-size: 2em; /* Font size for the paragraph */
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.595);
+}
+
+
+
+.about-us-container p {
+    font-size: 20px; /* Font size for the paragraph */
+    line-height: 1.5; /* Line height for better readability */
+}
+/* Contact Us section styles */
+.contact-us {
+    margin-top: 40px; /* Space above the contact section */
+    text-align: center; /* Center the text */
+    font-size: 2em; /* Font size */
+    color: rgb(246, 243, 175); /* Text color set to white */
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.595); /* Apply black shadow with 10px offset */
+    font-weight: bold; /* Make the text bold */
+}
+
+.contact-us a {
+    color: white; /* Link color set to white */
+    text-decoration: none; /* Remove underline from the link */
+}
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+    .about-us-container {
+        padding: 10px; /* Less padding on smaller screens */
+    }
+    
+    h2 {
+        font-size: 1.5em; /* Smaller title font size for mobile */
+    }
+
+    .contact-us {
+        margin-top: 20px; /* Less space on smaller screens */
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+}

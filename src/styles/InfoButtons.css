@@ -1,0 +1,72 @@
+/* Button container styles */
+.button-container {
+    display: flex; /* Flexbox for layout */
+    justify-content: space-around; /* Space buttons evenly */
+    align-items: center; /* Center buttons vertically */
+    margin-top: -90px; /* Negative margin to move it up */
+    margin-bottom: 70px; /* Adjust bottom margin for spacing */
+    padding: 10px; /* Inner padding for the container */
+    background: linear-gradient(90deg, #380c4a92, #a563b797, #40034c86); /* Gradient background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* About Us container styles */
+
+.sales-tax,
+.discount,
+.about-us-container {
+    font-size: 20px; /* Increase font size */
+    color: white; /* White text color */
+    text-align: justify; /* Justified text */
+    max-width: 800px; /* Limit width for better wrapping */
+    margin: 0 auto; /* Center the container */
+    line-height: 1.6; /* Adjust line height for readability */
+}
+
+.about-us-container p,
+.sales-tax p,
+.discount p,
+.home-button p {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+/* Button styles */
+.button-container button {
+    padding: 10px 20px; /* Padding for buttons */
+    font-size: 16px; /* Font size for buttons */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background change */
+    background-color: #4a2c6c; /* Button background color */
+    color: rgb(255, 255, 255); /* Button text color */
+}
+
+.button-container button:hover {
+    background-color: #6a4f8c; /* Darker shade on hover */
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically on mobile */
+        align-items: stretch; /* Stretch buttons to full width */
+    }
+    
+    .button-container button {
+        width: 100%; /* Full width for buttons on mobile */
+        margin-bottom: 10px; /* Space between buttons */
+        font-size: 14px; /* Smaller font size */
+        padding: 8px; /* Smaller padding */
+    }
+
+    .about-us-container,
+    .sales-tax,
+    .discount
+    {
+        font-size: 20px; /* Smaller font size */
+        line-height: 1.4; /* Slightly reduced line height */
+    }
+}

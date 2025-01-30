@@ -1,0 +1,242 @@
+/* General styles for the invoice preview */
+.invoice-preview {
+    max-width: 90%; /* Maximum width for the preview */
+    margin: 20px auto; /* Centered with margin */
+    padding: 20px; /* Inner padding */
+    background-color: #f3e5f5; /* Default light purple for the preview */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 5px 1px 5px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+/* Background Color */
+.background {
+    max-width: 80%; /* Full width for the background */
+    margin: auto; /* Centered */
+    background: linear-gradient(50deg, #380c4a, #9d0ac6); /* Gradient background */
+    min-height: 150vh; /* Full height coverage */
+    border-radius: 20px; /* Rounded corners */
+    border: 2px solid rgb(148, 42, 152); /* Border around background */
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.419); /* Shadow for depth */
+}
+
+/* Header styles */
+h2 {
+    text-align: center; /* Centered header */
+    color: #4a2c6c; /* Dark purple for headers */
+    margin-bottom: 15px; /* Space below header */
+    font-size: 25px; /* Reduced font size */
+}
+
+h3 {
+    text-align: left; /* Left-aligned subheader */
+    color: #4a2c6c; /* Matching color for subheaders */
+    margin-top: 10px; /* Space above subheaders */
+    font-size: 15px; /* Reduced font size */
+}
+
+h4 {
+    text-align: right; /* Left-aligned subheader */
+    color: #4a2c6c; /* Matching color for subheaders */
+    margin-top: 10px; /* Space above subheaders */
+    font-size: 15px; /* Reduced font size */
+}
+
+.invoice-table {
+    width: 100%; /* Full width for the table */
+    border-collapse: collapse; /* Collapse borders for cleaner look */
+    margin-top: 20px; /* Space above the table */
+}
+
+
+.invoice-table td {
+    padding: 10px; /* Padding for table cells */
+    text-align: left; /* Left-align text */
+    border-bottom: 1px solid #ddd; /* Border between cells */
+    font-size: 15px; /* Font size */
+}
+
+.invoice-table th {
+    background-color: #ec1ed0; /* Background color for header */
+    color: rgb(245, 242, 242); /* Text color for header */
+    font-weight: bold; /* Bold header text */
+    background: linear-gradient(50deg, #380c4a, #9d0ac6);
+} 
+
+
+
+/* Totals section styles */
+.totals {
+    margin-top: 20px; /* Space above totals section */
+    font-weight: bold; /* Bold text */
+    text-align: right; /* Right-align totals */
+    color: #4a2c6c; /* Darker purple for totals */
+}
+
+.customer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    text-align: left; /* Ensure text is left-aligned */
+}
+
+.customer-info h4 {
+    margin: 0;
+}
+
+.customer-info div {
+    margin: 0;
+}
+
+.customer-info p {
+    margin: 0;
+}
+
+.customer-info p:last-of-type {
+    margin-top: 20px;
+}
+
+
+.totals p {
+    margin: 5px 0; /* Space between total paragraphs */
+}
+
+.totals {
+    margin-top: 100px; /* Ensure there's space above the totals section */
+}
+
+.totals div {
+    width: 100%; /* Ensures columns take full width */
+    text-align: right; /* Align text to the right */
+}
+
+.totals p {
+    margin: 0; /* Remove default margin */
+    font-weight: bold; /* Ensure all paragraphs are bold */
+}
+
+.totals p:not(:last-child) {
+    margin-bottom: 20px; /* Add space between lines except for the last one */
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .invoice-preview {
+        max-width: 100%;
+        padding: 10px; /* Reduced padding for mobile */
+        margin: 10px; /* Add margin to prevent edge-to-edge layout */
+        
+    }
+
+    .invoice-table {
+        width: 70%; /* Full width for the table */
+        border-collapse: collapse; /* Collapse borders for cleaner look */
+        margin: 10px auto; /* Space above the table and center it */
+        
+    }
+
+    .background {
+    max-width: 100%; /* Full width for the background */
+    margin: 0; /* Centered */
+    min-height: auto; /* Full height coverage */
+    }
+
+    .right-align {
+        text-align: right;
+    }
+
+    th, td {
+        font-size: 14px; /* Smaller font size for table cells */
+        padding: 8px; /* Reduced padding for cells */
+    }
+
+    h2 {
+        font-size: 18px; /* Smaller font size for header */
+    }
+
+    h3 {
+        font-size: 15px; /* Smaller font size for subheader */
+    }
+
+    h4 {
+        text-align: right; /* Left-aligned subheader */
+        color: #4a2c6c; /* Matching color for subheaders */
+        margin-top: 10px; /* Space above subheaders */
+        font-size: 12px; /* Reduced font size */
+    }
+
+    .totals {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-end; /* Align items to the right */
+    }
+
+    .totals div {
+        width: 100%; /* Ensure each column takes full width */
+        text-align: right; /* Align text to the right */
+        margin-bottom: 20px; /* Space between columns */
+    }
+
+    .totals p {
+        margin: 0; /* Remove default margin */
+        font-weight: bold; /* Keep text bold */
+    }
+.customer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    text-align: left; /* Ensure text is left-aligned */
+}
+
+.customer-info h4 {
+    margin: 0;
+    font-size: 12px; /* Adjust the text size as needed */
+}
+
+.customer-info div {
+    margin: 0;
+    font-size: 12px; /* Adjust the text size as needed */
+}
+
+.customer-info p {
+    margin: 0;
+    font-size: 12px; /* Adjust the text size as needed */
+}
+
+.customer-info p:last-of-type {
+    margin-top: 20px;
+    
+}
+
+.seller-info {
+    margin-top: 10px;
+    text-align: right; /* Left-aligned subheader */
+    font-size: 12px; /* Adjust the text size as needed */
+}
+
+.seller-info h3 {
+    margin: 0;
+    text-align: right; /* Left-aligned subheader */
+}
+
+.seller-address, .seller-phone {
+    margin: 10px 0 0 0;
+    
+    text-align: left; /* Left-aligned subheader */
+}
+
+@media print {
+    body * {
+        visibility: hidden; /* Hide everything */
+    }
+    .invoice-preview, .invoice-preview * {
+        visibility: visible; /* Show only the invoice-preview div */
+    }
+    .invoice-preview {
+        position: absolute; /* Make sure it doesn’t affect the layout */
+        left: 0;
+        top: 0;
+        margin-top: -100px;
+    }
+}
+
+}
