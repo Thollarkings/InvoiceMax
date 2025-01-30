@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "//InvoiceMax/static/css/main.2568b865.css",
-    "main.js": "//InvoiceMax/static/js/main.2620e6a0.js",
-    "static/js/488.8f7715a5.chunk.js": "//InvoiceMax/static/js/488.8f7715a5.chunk.js",
-    "index.html": "//InvoiceMax/index.html",
-    "main.2568b865.css.map": "//InvoiceMax/static/css/main.2568b865.css.map",
-    "main.2620e6a0.js.map": "//InvoiceMax/static/js/main.2620e6a0.js.map",
-    "488.8f7715a5.chunk.js.map": "//InvoiceMax/static/js/488.8f7715a5.chunk.js.map"
+    "main.css": "/InvoiceMax/static/css/main.2568b865.css",
+    "main.js": "/InvoiceMax/static/js/main.e4d417d9.js",
+    "static/js/488.8f7715a5.chunk.js": "/InvoiceMax/static/js/488.8f7715a5.chunk.js",
+    "index.html": "/InvoiceMax/index.html",
+    "main.2568b865.css.map": "/InvoiceMax/static/css/main.2568b865.css.map",
+    "main.e4d417d9.js.map": "/InvoiceMax/static/js/main.e4d417d9.js.map",
+    "488.8f7715a5.chunk.js.map": "/InvoiceMax/static/js/488.8f7715a5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2568b865.css",
-    "static/js/main.2620e6a0.js"
+    "static/js/main.e4d417d9.js"
   ]
 }
